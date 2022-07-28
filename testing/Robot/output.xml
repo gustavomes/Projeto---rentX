@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20220706 15:27:55.921" rpa="false" schemaversion="3">
+<suite id="s1" name="Cars" source="/Users/gustavomdesouza/Documents/projeto-integrador-v1.0_equipe5/testing/Robot/cars.robot">
+<test id="s1-t1" name="Teste do site Alugue seu carro" line="8">
+<kw name="Abrir o site do cars" library="cars" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${SITE}</arg>
+<arg>${NAVEGADOR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220706 15:27:56.192" level="INFO">Opening browser 'Chrome' to base url 'https://dh-cars.vercel.app/'.</msg>
+<status status="PASS" starttime="20220706 15:27:56.192" endtime="20220706 15:27:58.327"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220706 15:27:58.327" endtime="20220706 15:27:58.469"/>
+</kw>
+<status status="PASS" starttime="20220706 15:27:56.192" endtime="20220706 15:27:58.470"/>
+</kw>
+<kw name="clicar no botão começar" library="cars">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${COMECAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220706 15:27:58.471" endtime="20220706 15:27:58.951"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${COMECAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220706 15:27:58.951" level="INFO">Clicking element 'css=#__next &gt; div.styles__Container-sc-12w9f51-0.eacwsp &gt; div &gt; aside &gt; a &gt; button'.</msg>
+<status status="PASS" starttime="20220706 15:27:58.951" endtime="20220706 15:27:59.037"/>
+</kw>
+<status status="PASS" starttime="20220706 15:27:58.470" endtime="20220706 15:27:59.037"/>
+</kw>
+<kw name="clicar no login" library="cars">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${B_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220706 15:27:59.038" endtime="20220706 15:27:59.072"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${B_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220706 15:27:59.073" level="INFO">Clicking element 'css=#__next &gt; div.styles__Container-sc-578l82-0.FlgWH &gt; div.styles__Content-sc-578l82-1.gVYPMt &gt; header &gt; div &gt; a &gt; div &gt; div.styles__UserLabel-sc-gjdy3r-6.vBWzK'.</msg>
+<status status="PASS" starttime="20220706 15:27:59.072" endtime="20220706 15:27:59.165"/>
+</kw>
+<status status="PASS" starttime="20220706 15:27:59.038" endtime="20220706 15:27:59.166"/>
+</kw>
+<kw name="fazer login" library="cars">
+<kw name="Wait and Input Text" library="cars">
+<arg>${I_LOGIN}</arg>
+<arg>${I_EMAIL}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220706 15:27:59.167" endtime="20220706 15:27:59.207"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220706 15:27:59.207" endtime="20220706 15:27:59.240"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 15:27:59.241" level="INFO">Typing text 'mariombraga01@gmail.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20220706 15:27:59.240" endtime="20220706 15:27:59.368"/>
+</kw>
+<status status="PASS" starttime="20220706 15:27:59.166" endtime="20220706 15:27:59.368"/>
+</kw>
+<kw name="Wait and Input Text" library="cars">
+<arg>${I_PASS}</arg>
+<arg>${PASS}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220706 15:27:59.369" endtime="20220706 15:27:59.387"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220706 15:27:59.387" endtime="20220706 15:27:59.408"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<arg>${TEXTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220706 15:27:59.409" level="INFO">Typing text '12345678' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20220706 15:27:59.408" endtime="20220706 15:27:59.480"/>
+</kw>
+<status status="PASS" starttime="20220706 15:27:59.368" endtime="20220706 15:27:59.480"/>
+</kw>
+<kw name="Wait and Click" library="cars">
+<arg>${B_LOGIN_E}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220706 15:27:59.481" endtime="20220706 15:27:59.501"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220706 15:27:59.502" endtime="20220706 15:27:59.525"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ELEMENTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220706 15:27:59.526" level="INFO">Clicking element 'css=#__next &gt; div.styles__Container-sc-578l82-0.FlgWH &gt; div.styles__Content-sc-578l82-1.gVYPMt &gt; div.styles__ContentContainer-sc-578l82-2.kWvhWA &gt; div &gt; div &gt; form &gt; button'.</msg>
+<status status="PASS" starttime="20220706 15:27:59.525" endtime="20220706 15:27:59.590"/>
+</kw>
+<status status="PASS" starttime="20220706 15:27:59.481" endtime="20220706 15:27:59.591"/>
+</kw>
+<status status="PASS" starttime="20220706 15:27:59.166" endtime="20220706 15:27:59.591"/>
+</kw>
+<status status="PASS" starttime="20220706 15:27:56.191" endtime="20220706 15:27:59.591"/>
+</test>
+<status status="PASS" starttime="20220706 15:27:55.923" endtime="20220706 15:27:59.592"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cars">Cars</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
